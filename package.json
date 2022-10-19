@@ -1,0 +1,30 @@
+{
+  "name": "kdlins-utils",
+  "version": "1.0.0",
+  "description": "常用的工具库",
+  "main": "dist/kdlinsUtils.min.js",
+  "author": "tree <522864794@qq.com>",
+  "scripts": {
+    "test": "jest --config test/unit/jest.config.js",
+    "build": "webpack --config ./config/webpack.config.js"
+  },
+  "keywords": [
+    "regular",
+    "utils",
+    "tool"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-transform-require-context": "^0.1.1",
+    "jest": "23.0.0",
+    "jest-cli": "23.0.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.19.4",
+    "babel-jest": "20.0.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
