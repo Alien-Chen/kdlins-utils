@@ -1,6 +1,6 @@
 {
   "name": "kdlins-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "常用的工具库",
   "main": "dist/kdlinsUtils.min.js",
   "author": "tree <522864794@qq.com>",
@@ -13,6 +13,10 @@
     "utils",
     "tool"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Alien-Chen/kdlins-utils.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.19.3",
