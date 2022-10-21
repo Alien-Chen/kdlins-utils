@@ -60,7 +60,7 @@ module.exports = {
   arrObjSum: function (obj, key) {
     return obj.reduce((prev, cur) => {
       return prev + cur[key];
-    }, cur);
+    }, 0);
   },
 
   /**
