@@ -20,7 +20,7 @@ module.exports = {
    * @param {Array} arr  数组
    */
   removeRepeat: function (arr) {
-    return Array.form(new Set(arr));
+    return Array.from(new Set(arr));
   },
 
   /**

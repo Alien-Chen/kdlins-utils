@@ -8,6 +8,6 @@ describe('数组通用方法模块', () => {
 
   test('数组去重', () => {
     const testArr = [1, 2, 2, 3, 5, 5];
-    expect(arr.removeRepeat(testArr));
+    expect(arr.removeRepeat(testArr)).toEqual([1, 2, 3, 5]);
   });
 });

@@ -71,8 +71,8 @@ utils.regular.purePasswordTest('12345')
 
 ## Signature 利用canvas实现的签名功能的公共方法
 |方法名|作用|参数|版本|
-|--|--|--|--|--|
-|Draw|签名类的构造函数|canvas canvas标签, degree 画布旋转弧度, config context相关配置| 1.0.3|
+|--|--|--|--|
+|Draw|签名类的构造函数|canvas canvas标签, degree 画布旋转弧度, config context相关配置| 1.0.2|
 
 ### 使用
 ```js
