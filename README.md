@@ -104,3 +104,17 @@ draw.upload(blob, url, success, failure) // 上传签名 blob img被转为blob�
 import utils from 'kdlins-utils'
 utils.client.checkIsIphoneX()
 ```
+
+## Http 对 axios 的二次封装
+|方法名|作用|参数|版本|
+|--|--|--|--|
+|HttpRequest|对axios的二次封装|baseUrl 请求的基础路径，store vuex的store，publicConfig 项目中的公共配置其中需要配置一个publicPath属性用于筛选出一些不需要登录就能访问得接口| 1.0.4|
+
+### 使用
+```js
+import utils from 'kdlins-utils'
+import config from '../config'
+import store from '@/store'
+const baseUrl = process.env.NODE_ENV === 'dev' ? config.BaseUrl.dev : config.BaseUrl.prod
+export default new utils.http.HttpRequest(baseUrl, store, config)
+```
