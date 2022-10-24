@@ -3,7 +3,7 @@
  * @Author: zqchen
  * @Date: 2022-10-13 17:03:36
  * @Last Modified by: zqchen
- * @Last Modified time: 2022-10-14 16:40:01
+ * @Last Modified time: 2022-10-24 13:12:36
  */
 const aCity = {
   11: '北京',
@@ -55,7 +55,7 @@ module.exports = {
       // 身份证地区号非法
       return false;
     }
-    sBirthday =
+    let sBirthday =
       str.substr(6, 4) +
       '-' +
       Number(str.substr(10, 2)) +
