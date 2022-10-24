@@ -114,4 +114,14 @@ module.exports = {
       .concat(arrTwo)
       .filter((v) => !arrOne.includes(v) || !arrTwo.includes(v));
   },
+
+  /**
+   * 数组扁平化
+   * @param {Array} arr
+   */
+  flatten: function (arr) {
+    return arr.reduce((prev, cur) => {
+      return prev.concat(Array.isArray(cur) ? this.flatten(cur) : cur);
+    }, []);
+  },
 };

@@ -21,6 +21,7 @@ console.log(utils.regular.purePasswordTest('1234'))
 |arrSet|数组并集|arrOne：数组一；arrTwo：数组二|Array，处理的数组值|1.0.1|
 |arrIntersection|数组交集|arrOne：数组一；arrTwo：数组二|Array，处理的数组值|1.0.1|
 |arrDifference|数组差集|arrOne：数组一；arrTwo：数组二|Array，处理的数组值|1.0.1|
+|flatten|数组扁平化|arr|Array，处理的数组值|1.0.3|
 
 ### 使用
 ```js
@@ -87,4 +88,19 @@ draw.downloadPNGImage(img) // 下载图片到本地
 draw.dataURLtoBlob(dataUrl) // 转换为blob
 draw.clear() // 清楚画板
 draw.upload(blob, url, success, failure) // 上传签名 blob img被转为blob格式，url api接口名称，success 成功回调，failure 失败回调
+```
+
+## Client 判断浏览器，手机型号相关方法
+|方法名|作用|参数|版本|
+|--|--|--|--|
+|checkBrowser|返回浏览器类型|无| 1.0.3|
+|checkBrowserCore|返回浏览器内核|无| 1.0.3|
+|checkIosAndroidIpad|判断是终端类型,值有ios,android,iPad|无| 1.0.3|
+|checkWeixinQqUc|判断是否是微信,qq 或 ucd|无| 1.0.3|
+|checkIsIphoneX|检查是否是 IphoneX 以上的机型d|无| 1.0.3|
+
+### 使用
+```js
+import utils from 'kdlins-utils'
+utils.client.checkIsIphoneX()
 ```

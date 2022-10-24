@@ -64,4 +64,9 @@ describe('数组通用方法模块', () => {
     const arrTwo = [4, 5, 9, 10];
     expect(arr.arrDifference(arrOne, arrTwo)).toEqual([1, 6, 7, 5, 9, 10]);
   });
+
+  test('数组扁平化', () => {
+    const arrTest = [1, [2, 5, 8, [7, 19, 18, [29]]], [10, 90]];
+    expect(arr.flatten(arrTest)).toEqual([1, 2, 5, 8, 7, 19, 18, 29, 10, 90]);
+  });
 });
