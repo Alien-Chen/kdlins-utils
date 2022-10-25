@@ -118,3 +118,43 @@ import store from '@/store'
 const baseUrl = process.env.NODE_ENV === 'dev' ? config.BaseUrl.dev : config.BaseUrl.prod
 export default new utils.http.HttpRequest(baseUrl, store, config)
 ```
+
+## 节流防抖 模块
+|方法名|作用|参数|版本|
+|--|--|--|--|
+|throttle|节流|fn 执行函数，delay 节流时间(毫秒)| 1.0.5|
+|debounce|防抖|fn 执行函数，delay 节流时间(毫秒), triggleNow 是否立即执行| 1.0.5|
+### 使用
+```js
+import utils from 'kdlins-utils'
+const testFn = function () { console.log('test thrDeb') }
+// 节流
+utils.thrDeb.throttle(testFn, 100)
+// 防抖
+utils.thrDeb.debounce(testFn, 100, true)()
+```
+## localStorage 模块
+|方法名|作用|参数|版本|
+|--|--|--|--|
+|get|获取localStorage上的属性值|name 属性值| 1.0.5|
+|set|设置 localStorage|name 需要设置的属性，content 需要设置的属性值| 1.0.5|
+|delete|删除 localStorage|name 需要删除的属性| 1.0.5|
+
+### 使用
+```js
+import utils from 'kdlins-utils'
+utils.localStorage.get('name')
+```
+
+## sessionStorage 模块
+|方法名|作用|参数|版本|
+|--|--|--|--|
+|get|获取sessionStorage上的属性值|name 属性值| 1.0.5|
+|set|设置 sessionStorage|name 需要设置的属性，content 需要设置的属性值| 1.0.5|
+|delete|删除 sessionStorage|name 需要删除的属性| 1.0.5|
+
+### 使用
+```js
+import utils from 'kdlins-utils'
+utils.sessionStorage.get('name')
+```
