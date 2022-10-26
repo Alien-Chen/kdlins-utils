@@ -1,13 +1,14 @@
 {
   "name": "kdlins-utils",
-  "version": "1.0.4",
+  "version": "1.0.5-3",
   "description": "常用的工具库",
   "main": "dist/kdlinsUtils.min.js",
   "author": "tree <522864794@qq.com>",
   "scripts": {
     "test": "jest --config test/unit/jest.config.js",
     "build": "webpack --config ./config/webpack.config.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pub": "npm run build & npm publish"
   },
   "keywords": [
     "regular",

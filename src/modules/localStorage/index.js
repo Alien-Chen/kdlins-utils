@@ -3,7 +3,7 @@
  * @Author: zqchen
  * @Date: 2022-10-13 14:15:40
  * @Last Modified by: zqchen
- * @Last Modified time: 2022-10-13 14:23:51
+ * @Last Modified time: 2022-10-26 14:47:03
  */
 
 module.exports = {
@@ -21,5 +21,19 @@ module.exports = {
   delete: function (name) {
     if (!name) return;
     window.localStorage.removeItem(name);
+  },
+
+  /**
+   * localStorage 存储一段时间失效
+   * @param {String} key 属性
+   * @param {*} value 储存值
+   * @param {*} expire 有效时长
+   */
+  setExpire: function (key, value, expire) {
+    if (typeof value === 'object') value = JSON.stringify(value);
+    localStorage.setItem(key, value);
+    setTimeout(() => {
+      localStorage.removeItem(key);
+    }, expire);
   },
 };

@@ -139,7 +139,7 @@ utils.thrDeb.debounce(testFn, 100, true)()
 |get|获取localStorage上的属性值|name 属性值| 1.0.5|
 |set|设置 localStorage|name 需要设置的属性，content 需要设置的属性值| 1.0.5|
 |delete|删除 localStorage|name 需要删除的属性| 1.0.5|
-
+|setExpire|localStorage 存储一段时间失效|key 属性， value 储存值，expire有效时长| 1.0.5-4|
 ### 使用
 ```js
 import utils from 'kdlins-utils'
@@ -152,9 +152,21 @@ utils.localStorage.get('name')
 |get|获取sessionStorage上的属性值|name 属性值| 1.0.5|
 |set|设置 sessionStorage|name 需要设置的属性，content 需要设置的属性值| 1.0.5|
 |delete|删除 sessionStorage|name 需要删除的属性| 1.0.5|
-
+|setExpire|sessionStorage 存储一段时间失效|key 属性， value 储存值，expire有效时长| 1.0.5-4|
 ### 使用
 ```js
 import utils from 'kdlins-utils'
 utils.sessionStorage.get('name')
+```
+
+## cookie 操作相关 模块
+|方法名|作用|参数|版本|
+|--|--|--|--|
+|set|存在 cookie数据可添加过期时间|key 属性值，value 值，expire过期时间(单位天)| 1.0.5-4|
+|get|用key获取cookie 值|key 属性| 1.0.5-4|
+|remove|删除 cookie|key 需要删除的属性| 1.0.5-4|
+### 使用
+```js
+import utils from 'kdlins-utils'
+utils.cookie.get('name')
 ```
