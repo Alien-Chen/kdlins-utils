@@ -22,7 +22,10 @@ console.log(utils.regular.purePasswordTest('1234'))
 |arrIntersection|数组交集|arrOne：数组一；arrTwo：数组二|Array，处理的数组值|1.0.1|
 |arrDifference|数组差集|arrOne：数组一；arrTwo：数组二|Array，处理的数组值|1.0.1|
 |flatten|数组扁平化|arr|Array，处理的数组值|1.0.3|
-
+|isSameArrEle|判断数组的元素是否都相同 |arr|boolean,数组元素是否都相同|1.0.5-5|
+|determineOrder|判断数值是升序还是降序 |arr|string（'not enough items'-> 没有足够长度的子项，'unsorted'->无规律的数组，'all items are equal'-> 所有子项都相等,'ascending'->升序，'descending'->降序），|1.0.5-5|
+|isAscendContinue|判断升序数组是否连续 |arr|boolean,升序数组是否连续|1.0.5-5|
+|isDescendContinue|判断降序数组是否连续 |arr|boolean,降序数组是否连续|1.0.5-5|
 ### 使用
 ```js
 import utils from 'kdlins-utils'
@@ -63,6 +66,7 @@ utils.arr.arrJudge([])
 |cnNameTest| 验证中文名称| str|Boolean 值|1.0.0|
 |enNameTest| 验证英文名称| str|Boolean 值|1.0.0|
 |postCodeTest| 验证邮政编号| str|Boolean 值|1.0.0|
+|keyPasswordTest| 禁止使用‘键盘密码’，即：不要使用键盘中‘横、竖、斜’方向的连续4个（含）按键组合| str|Boolean 值|1.0.5-5|
 ### 使用
 ```js
 import utils from 'kdlins-utils'

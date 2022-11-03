@@ -1,6 +1,6 @@
 {
   "name": "kdlins-utils",
-  "version": "1.0.5-3",
+  "version": "1.0.5-4",
   "description": "常用的工具库",
   "main": "dist/kdlinsUtils.min.js",
   "author": "tree <522864794@qq.com>",

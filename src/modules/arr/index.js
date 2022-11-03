@@ -124,4 +124,65 @@ module.exports = {
       return prev.concat(Array.isArray(cur) ? this.flatten(cur) : cur);
     }, []);
   },
+
+  /** 判断数组的元素是否都相同 */
+  isSameArrEle(arr) {
+    const len = arr.length;
+    let count = 0;
+    const temp = arr[0];
+    for (let i = 1; i < len; i++) {
+      if (arr[i] === temp) {
+        count++;
+      }
+    }
+    return len - 1 === count;
+  },
+
+  /** 判断数值是升序还是降序 */
+  determineOrder(arr) {
+    if (arr.length < 2) {
+      return 'not enough items';
+    }
+    let ascending = null;
+    let nextArr = arr.slice(1);
+    for (var i = 0; i < nextArr.length; i++) {
+      if (nextArr[i] === arr[i]) {
+        continue;
+      } else if (ascending === null) {
+        ascending = nextArr[i] > arr[i];
+      } else if (ascending !== nextArr[i] > arr[i]) {
+        return 'unsorted';
+      }
+    }
+    if (ascending === null) {
+      return 'all items are equal';
+    }
+    return ascending ? 'ascending' : 'descending';
+  },
+
+  /** 判断升序数组是否连续 */
+  isAscendContinue(arr) {
+    const len = arr.length;
+    let isContinue = true;
+    for (let i = 1; i < len; i++) {
+      if (arr[0] + i !== arr[i]) {
+        isContinue = false;
+        break;
+      }
+    }
+    return isContinue;
+  },
+
+  /** 判断降序数组是否连续 */
+  isDescendContinue(arr) {
+    const len = arr.length;
+    let isContinue = true;
+    for (let i = 1; i < len; i++) {
+      if (arr[0] - i !== arr[i]) {
+        isContinue = false;
+        break;
+      }
+    }
+    return isContinue;
+  },
 };
